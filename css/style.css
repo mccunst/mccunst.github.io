@@ -1,0 +1,280 @@
+.header{
+  position: relative;
+  padding: 15px 0 0;
+  background-color: #fff;
+}
+.logo{
+  width: 140px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.logo a {
+  display: inline-block;
+}
+.nav-toggle{
+  display: none;
+}
+.btn-burger{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 2;
+  display: block;
+  width: 44px;
+  height:44px;
+  background: url("../img/burger.svg") center center / 35px 20px no-repeat;
+  cursor: pointer;
+}
+.nav-toggle:checked ~ .btn-burger{
+  background: url("../img/close.svg") center center /26px 26px no-repeat;
+}
+.nav{
+  padding-top: 10px;
+  background: url("../img/nav_bg.png") center center /cover no-repeat;
+}
+.nav-list{
+  list-style: none; /* ← これで黒丸を消す */
+  display: none;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.nav-list li{
+  margin: 0;
+  padding: 10px;
+}
+.nav-list a{
+  display: block;
+  color: #fff;
+}
+.nav-toggle:checked ~ .nav .nav-list{
+  display: block;
+}
+.footer{
+  padding: 40px 0 30px;
+  color: #032559;
+  text-align: center;
+  background: url("../img/footer_bg.png") center center / cover no-repeat;
+}
+.footer-logo{
+  margin-bottom: 10px;
+}
+.footer-address{
+  margin: 10px 0;
+}
+.footer-sns{
+  margin: 20px 0;
+  text-align: center;
+}
+.footer-sns a{
+  display: inline-block;
+  margin: 0 5px;
+}
+.footer-sns img{
+  vertical-align: middle;
+}
+.copyright{
+  margin: 0;
+}
+.copyright small{
+  font-size: 11px;
+}
+.section{
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 10px;
+}
+.heading-section{
+  text-align: center;
+}
+.heading-topic{
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #032559;
+}
+.top{
+  height: 200px;
+  margin-bottom: 50px;
+  background: url("../img/top.jpg") center bottom /cover no-repeat;
+}
+.col{
+  max-width: 300px;
+  margin: 0 auto 50px;
+  flex: 1 1 calc(33.333% - 20px); /* 3列で均等に分ける */
+  box-sizing: border-box;
+}
+.col-image{
+  margin-bottom: 10px;
+}
+.col-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50% / 20%; /* 楕円形の見た目を再現してるなら */
+  display: block;
+}
+.col p{
+  margin-bottom: 0;
+}
+.open-time{
+  text-align: center;
+}
+.open-time-list{
+  display: inline-block;
+  margin: 0 0 0 30px;
+  list-style: disc;
+  text-align: left;
+}
+.price-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.price-table thead{
+  color: #fff;
+  background-color: #4184e2;
+}
+.price-table th,
+.price-table td{
+  padding: 20px 15px;
+  font-weight: 500;
+  border: 1px solid #707070;
+}
+.price-table tbody th{
+  text-align: left;
+  background-color: #fff;
+}
+.price-table tbody td{
+  background-color: #fff;
+}
+.form-group{
+  margin-bottom: 20px;
+}
+.form-label{
+  display: block;
+  margin-bottom: 10px;
+  color: #032559;
+}
+.form-btn{
+  margin:30px 0;
+  text-align: center;
+}
+input[type="text"],input[type="email"],textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999;
+}
+input[type="text"]:focus,input[type="email"]:focus,textarea:focus{
+  border-color: #032559;
+  outline: none;
+}
+button[type="submit"]{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+button[type="submit"]:hover{
+  opacity: 0.65;
+}
+@media screen and (min-width:768px) {
+  .header{
+    padding: 40px 0 0;
+  }
+  .logo{
+    width: auto;
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: center;
+  }
+  .btn-burger{
+    display: none;
+  }
+  .nav{
+    padding: 40px 0;
+  }
+  .nav-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
+  }
+  .nav-list li{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding: 0 20px;
+    line-height: 1;
+    border-right: 1px solid #fff;
+  }
+  .nav-list li:first-child{
+    border-left: 1px solid #fff;
+  }
+  .nav-toggle:checked ~ .nav .nav-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer{
+    padding: 50px 0 20px;
+  }
+  .footer-sns{
+    margin: 30px 0;
+  }
+  .section{
+    margin-bottom: 100px;
+  }
+  .heading-section{
+    margin-bottom: 50px;
+  }
+  .top{
+    height: 378px;
+    margin-bottom: 70px;
+  }
+  .row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .col{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 32%;
+    flex: 0 1 32%;
+    margin: 0;
+  }
+  .price-table{
+    font-size: 16px;
+  }
+  .price-table th,
+  .price-table td{
+    padding: 20px;
+  }
+  .form-group{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 800px;
+    margin-bottom: 10px;
+  }
+  .form-label{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 12em;
+    flex: 0 0 12em;
+    max-width: 12em;
+    margin: 0;
+    padding-top: 5px;
+  }
+  .form-col{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+}
